@@ -8,6 +8,10 @@
 /* YOUR CSS RULES START HERE */
 
 
+h2 {
+    font-size: 24px;
+}
+
 
 /* YOUR CSS RULES STOP HERE */
 
