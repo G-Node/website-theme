@@ -1,0 +1,5 @@
+<div id="logo-partner" i18n:domain="custom_i18n_domain">
+        <a tal:attributes="href view/navigation_root_url">
+            <img src="logo_partner.gif" alt=""/>
+        </a>
+</div>

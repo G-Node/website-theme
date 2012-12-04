@@ -1,0 +1,86 @@
+/*
+** Table-based column layout for all browsers.
+**
+** There's a table-less column layout alternative in the plone_tableless
+** skin layer, if you prefer layouts without tables.
+*/
+
+/* <dtml-with base_properties> */
+#body-center {
+    background: url(&dtml-portal_url;/inhalt_bg2.jpg) no-repeat scroll left top transparent;
+ 	margin: 0 auto;
+    width: 960px;
+}
+#contentseite {
+	background: #eff0f3 url(&dtml-portal_url;/contentseite_bg2.jpg) no-repeat left top;
+    min-height: 400px;
+    width: 928px !important;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-top: 0px;
+	margin-top: 0px;	
+	padding-bottom: 20px;
+    margin-left: 18px !important;
+}
+#portal-columns {
+    width: 910px;
+    padding: 10px 0px 0px 15px;
+}
+#portal-column-one {
+    vertical-align: top;
+    width: 150px;
+    padding: 0px 15px 0px 0px;
+}
+#portal-column-two {
+    vertical-align: top;
+    width: 170px;
+    padding: 0px 0px 0px 15px;
+}
+#portal-column-content {
+    vertical-align: top;
+}
+#content-views {
+    padding: 0px 0px 0px 10px;
+    border-bottom: 1px solid #00fcff;
+}
+#content-views a {
+    color: #00fcff;
+    border: 1px solid #00fcff;
+}
+#content-views a:hover {
+    background: #568EBE;
+}
+#content-views li.selected a {
+    background: #568EBE;
+}
+#contentseite .contentActions {
+    background: #568EBE;
+    border-left: 1px solid #00fcff;
+    border-right: 1px solid #00fcff;
+}
+.contentActions span {
+    color: #00fcff;
+    font-size: 9pt;
+}
+#contentActionMenus ul {
+    background: #eff0f3;
+    border-left: 1px solid #00fcff;
+    border-right: 1px solid #00fcff;
+    border-bottom: 1px solid #00fcff;
+}
+#contentActionMenus a:hover {
+    background: #568EBE;
+}
+#region-content {
+    padding: 0px 5px 0px 5px;
+}
+.documentEditable #region-content {
+    border: 1px solid #00fcff;
+}
+#content {
+    padding: 0px 10px 10px 10px;
+}
+#content ul {
+    padding: 0px 0px 0px 20px;
+}
+/* </dtml-with> */

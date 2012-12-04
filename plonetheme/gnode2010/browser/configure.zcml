@@ -1,0 +1,91 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="plonetheme.gnode2010">
+
+  <!-- 'gnode2010' Zope 3 browser layer
+    Register views, viewlets and resources for this layer to make sure
+    they only apply to the 'gnode2010' theme.
+    You can also use this layer to override default Plone browser views
+    and viewlets only within the 'gnode2010' theme.
+  -->
+  <interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="gnode2010"
+      />
+  
+
+
+  <!-- Viewlets registration -->
+  <!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
+  <browser:viewlet
+      name="plonetheme.someviewlet"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".viewlets.MyViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View"
+      />
+  -->
+  <!-- The personal bar -->
+  <browser:viewlet
+      name="plone.personal_bar"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class=".viewlets.PersonalBarViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View" 
+      />
+  <browser:viewlet
+      name="plone.logo_gnode"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class=".viewlets.LogoGNode"
+      permission="zope2.View"
+  />
+  <browser:viewlet
+      name="plone.logo_partner"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class=".viewlets.LogoPartner"
+      permission="zope2.View"
+  />
+  <!-- Customize the navigation portlet -->
+  <plone:portletRenderer
+      portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
+      layer=".interfaces.IThemeSpecific"
+      class=".navigation.MyNavRenderer"
+  />
+  <!-- G-Node Footer -->
+  <browser:viewlet
+      name="plone.footer"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      layer=".interfaces.IThemeSpecific"
+      template="footer.pt"
+      permission="zope.Public"
+  />
+
+  <!-- Zope 3 browser resources -->
+
+  <!-- Resource directory for images
+    See plonetheme/gnode2010/browser/images/README.txt
+    for more information about registering images as Zope 3 browser
+    resources.
+  -->
+  <browser:resourceDirectory
+      name="plonetheme.gnode2010.images"
+      directory="images"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- Resource directory for stylesheets
+    See plonetheme/gnode2010/browser/stylesheets/README.txt
+    for more information about registering stylesheets as Zope 3 browser
+    resources.
+  -->
+  <browser:resourceDirectory
+      name="plonetheme.gnode2010.stylesheets"
+      directory="stylesheets"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+</configure>

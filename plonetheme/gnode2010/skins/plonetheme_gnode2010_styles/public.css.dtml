@@ -1,0 +1,341 @@
+/*
+  This file is based on the ploneCustom.css.dtml file shipped with Plone.
+
+  <dtml-with base_properties> (do not remove this)
+  <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either)
+*/
+
+/* YOUR CSS RULES START HERE */
+
+/* @group GRUNDDEFINITIONEN */
+html, body, div, p, h1, h2, h3, ul, ol, table, td, form, img, li, input, textarea, select
+{
+	font-family: Arial, Verdana, Helvetica, Geneva, sans-serif;
+	color: #144964;
+	font-size: 12px;
+	line-height: 1.2em;
+}
+
+html, body, div, p, h1, h2, h3, ul, ol, a, table, td, form, img, li
+{ 
+   margin: 0; 
+   padding: 0;
+}
+
+html, body
+{
+	font-weight: normal;
+	margin-bottom:1px;
+	background: #ffffff url(&dtml-portal_url;/bg.gif) repeat-x top left;
+}
+
+html{
+  height:100%;
+  margin-bottom:1px;	
+}
+
+body
+{
+  font-size:100.01%;
+  min-height:101%;	
+}
+
+a:link, a:visited
+{ 
+   color: #11589a; 
+   text-decoration: underline;
+   font-weight: normal;
+}
+a:hover, a:active, a.selected:link, a.selected:visited, a.selected:hover, a.selected:active
+{
+   color: #568ebe; 
+   text-decoration: none;
+   font-weight: normal;
+}
+a.search { color:green !important; }
+
+img
+{ 
+   border: 0px; 
+}
+
+hr{
+  width:80%;
+  margin-top:35px;	
+  margin-bottom:35px;
+  color:#9DA1A5;
+  border-color: #ccc;
+}
+ul.visualInline
+{
+	float: left;
+	list-style-type: none;
+	list-style-position: inside;
+	padding: 0px 10px 0px 0px;
+    margin: 0;
+}
+span.visualCaseSensitive
+{
+    padding: 0px 0px 0px 0px;
+}
+
+/* @group HEADER */
+#portal-top
+{
+	position: relative;
+	width:930px;
+	height: 100%;
+	margin: 0px auto 0px auto;
+}
+#portal-top ul li a
+{
+	display: block;
+	font-weight: normal;
+	letter-spacing: 0px;
+	line-height: 11px;	
+	text-decoration: none;
+}
+
+#portal-top select{
+	font-size: 10px;
+}
+
+#keyvisual
+{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 10;
+}
+
+#portal-logo
+{
+	position: relative;
+    width: 100%;
+	#left: 50px;
+	z-index: 30;
+}
+
+#portal-logo img {
+    width: 930;
+    height: 129;
+    border: 0;
+    padding: 0;
+}
+#logo-gnode
+{
+	position: absolute;
+    top: 33px;
+	#position: relative;
+    #top: -149px;
+	left: 0px;
+	z-index: 40;
+}
+#logo-partner
+{
+    #float: right;
+	#position: relative;
+	#top: -171px;
+    position: absolute;
+	right: 0px;
+    top: 71px;
+	z-index: 70;
+}
+
+
+/* ### HEADER-NAVIGATION ### */
+
+#portal-personaltools
+{
+	padding: 0px;
+	margin: 0px;
+	position: absolute;
+	z-index: 60;
+	left:  710px;
+}
+#portal-personaltools-wrapper ul li a:hover
+{
+	color: #0d4981;
+}
+#portal-personaltools-wrapper li
+{
+	float: left;
+	list-style-type: none;
+	list-style-position: inside;
+	padding: 0px 10px 0px 0px;
+    margin: 4px 0px 0px 0px;
+}
+#portal-personaltools-wrapper a
+{
+    color: #ffffff;
+}
+#portal-searchbox
+{
+    float: right;
+}
+
+
+/* @group NAVIGATION */
+
+/* this two blocks displays a long blue bar */
+#globalnav-background {
+	background: #568ebe url(&dtml-portal_url;/navigation_bg.gif) repeat-x left top;
+	height: 35px;
+    margin: 129px 0px 0px 0px;
+}
+#visual-portal-wrapper {
+    position: relative;
+    top: -164px;
+}
+#portal-globalnav
+{
+	background: #568ebe url(&dtml-portal_url;/navigation_bg.gif) repeat-x left top;
+	height: 35px;
+	margin: 0px 0px 3px 0px;
+	padding: 0px; /*auto 0px auto;*/
+}
+#portal-globalnav li
+{
+	float: left;
+	list-style-type: none;
+	list-style-position: inside;
+}
+#portal-globalnav li a
+{
+	display: block;
+	font-weight: normal;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	letter-spacing: 0px;
+	padding-left: 13px;
+	padding-right: 15px;
+	padding-top: 11px;
+	padding-bottom: 10px;
+	background: transparent url(&dtml-portal_url;/navigation_spacer.gif) no-repeat center right;
+	text-decoration: none;
+}
+#portal-globalnav li a:hover, 
+#portal-globalnav li.selected a, 
+#portal-globalnav li.selected a:hover
+{
+	color: #00fcff;
+}
+#portal-globalnav li.selected
+{
+	background: transparent url(&dtml-portal_url;/navigation_pfeil.gif) no-repeat center top;
+}
+#portal-globalnav li.last a
+{
+	background-image: none;
+}
+
+/* SEARCH */
+#LSResult
+{
+    #position: absolute;
+    background: white;
+    z-index: 100;
+}
+#LSResult ul {
+	list-style-type: none;
+	list-style-position: inside;
+}
+.livesearchContainer
+{
+    width: 150px;
+}
+
+/* @group TEXT */
+h1, h2, h3, h4, p, ul, form, ul
+{ 
+   line-height: 1.5em;
+   padding: 0px 0px 10px 0px; 
+}
+h1
+{ 
+   font-size: 18px;
+   line-height: 20px;
+   font-family: Arial, Verdana, sans-serif;
+   font-weight: normal;
+   color: #004c93;
+   margin-top: 20px;
+   margin-bottom: 10px;
+}
+h2 
+{ 
+   font-size: 14px;
+   line-height: 18px;
+   font-family: Arial, Verdana, sans-serif;
+   font-weight: bold;
+   color: #004c93;
+   margin-top: 10px;
+   margin-bottom: 0px;
+}
+h2.lightPadding
+{ 
+   padding: 0px 0px 5px 0px;
+}
+h3
+{
+	font-weight: normal;
+	color: #a09e9e;
+	font-size: 14px;
+	margin: 0px;
+}
+h4
+{
+	font-size: 12px;
+	padding: 0px;
+	line-height: 1em;
+	font-weight: normal;
+}
+dl{
+   line-height: 1.5em;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding: 0px 20px 10px 0px; 	
+}
+dt{	
+  margin-left: 0px;	
+  margin-top: 5px;	
+  margin-bottom: 5px;	
+  font-size: 10pt;
+  padding: 0px;
+  line-height: 1em;
+  font-weight: normal;
+}
+dd{
+  margin-left: 15px;	
+  color: #505050;
+}
+
+
+/* @group FOOTER */
+#portal-footer 
+{
+	background: #ffffff url(&dtml-portal_url;/footer_bg2.jpg) no-repeat left top;
+	height: 100px;
+    width: 930px;
+	margin: 20px auto 0px auto;
+}
+#portal-footer {
+	padding: 15px 10px 10px 15px;
+	text-align: center;
+	color: #9da1a5;
+}
+
+/* @group COLOPHON */
+#portal-colophon 
+{
+    width: 930px;
+	margin: 0px auto 0px auto;
+}
+
+
+/* YOUR CSS RULES STOP HERE */
+
+/* </dtml-with> */
+
+/* Latest version of the documentation on pre-defined properties from Plone 
+   can be found in CMFPlone/skins/plone_styles/ploneCustom.css.dtml */
