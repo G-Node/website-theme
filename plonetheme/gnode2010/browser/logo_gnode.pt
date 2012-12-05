@@ -1,5 +1,5 @@
 <div id="logo-gnode" i18n:domain="custom_i18n_domain">
         <a tal:attributes="href view/navigation_root_url">
-            <img src="logo_gnode.png" alt=""/>
+            <img width="300" src="logo_gnode.png" alt=""/>
         </a>
 </div>
