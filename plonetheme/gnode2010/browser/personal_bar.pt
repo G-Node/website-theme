@@ -3,36 +3,104 @@
 
 <h5 class="hiddenStructure" i18n:translate="heading_personal_tools">Personal tools</h5>
 
-<ul id="portal-personaltools"
-    tal:condition="python:view.user_actions or not view.anonymous"
-    class="visualInline">
-   <li><a href="http://portal.g-node.org/g-node-wiki/">Wiki</a></li>
-   <tal:block condition="not: view/anonymous">
-       <li><a 
-           id="user-name"
-           tal:attributes="href view/homelink_url"
-          >
-            <span class="visualCaseSensitive"
-                 tal:content="view/user_name">
-                John
-           </span
-       ></a></li>
-   </tal:block>
+<ul class="actionMenu deactivated" id="portal-personaltools"
+    tal:condition="python:view.user_actions and not view.anonymous">
+  <li><a href="http://portal.g-node.org/g-node-wiki/">Wiki</a></li>
+  <li>
+    <a id="user-name"
+       tal:attributes="href view/homelink_url"
+       tal:content="view/user_name">
+        John
+    </a>
+  </li>
+  <li>
+    <script type="text/javascript">
+    function FollowURL (select) {
+      var wert = select.options[select.options.selectedIndex].value;
+      window.location.href = wert;
 
-    <tal:actions tal:repeat="action view/user_actions">
-        <li tal:define="icon action/icon | nothing;
-                        icon python:icon is not None and icon or view.getIconFor(action['category'], action['id'], None);
-                        class_name string:visualIcon actionicon-${action/category}-${action/id};
-                        class_name python:icon is not None and class_name or nothing;"
-            tal:attributes="class class_name">
+    }
+    </script>
+    <select onchange="FollowURL(this)">
+      <option value="underfined">Navigate to:</option>
+      <option tal:repeat="action view/user_actions"
+          tal:attributes="value action/url"
+          tal:content="action/title">
+              action title
+      </option>
+    </select>
+  </li>
+</ul>
+
+<!-- OLD WAY FOR USER ACTIONS
+
+<dl class="visualInline" id="portal-personaltools"
+    tal:condition="python:view.user_actions and not view.anonymous">
+  <tal:block condition="not: view/anonymous">
+
+  <dt class="actionMenuHeader">
+    <a href="http://portal.g-node.org/g-node-wiki/">Wiki</a>
+    <a id="user-name"
+       tal:attributes="href view/homelink_url"
+       tal:content="view/user_name">
+        John
+    </a>
+
+    <script type="text/javascript">
+    function FollowURL (select) {
+      var wert = select.options[select.options.selectedIndex].value;
+      window.location.href = wert;
+
+    }
+    </script>
+    <select onchange="FollowURL(this)">
+      <option value="underfined">Navigate to:</option>
+      <option tal:repeat="action view/user_actions"
+          tal:attributes="value action/url"
+          tal:content="action/title">
+              action title
+      </option>
+    </select>
+
+  </dt>
+
+  <dd class="actionMenuContent">
+    <ul>
+        <li tal:repeat="action view/user_actions"
+            tal:attributes="id string:personaltools-${action/id}">
             <a href=""
                tal:attributes="href action/url;
-                               class python:icon is not None and 'visualIconPadding' or nothing;"
-            ><tal:actionname i18n:translate="" 
-                             tal:content="action/title">dummy</tal:actionname
-            ></a>
+                               target action/link_target|nothing"
+               tal:content="action/title"
+               i18n:translate="">
+                action title
+            </a>
         </li>
-    </tal:actions>
+    </ul>
+  </dd>
 
+  </tal:block>
+</dl>
+
+-->
+
+
+<ul class="actionMenu deactivated" id="portal-personaltools"
+    tal:condition="python:view.user_actions and view.anonymous">
+  <li><a href="http://portal.g-node.org/g-node-wiki/">Wiki</a></li>
+  <li id="anon-personalbar">
+    <tal:actions repeat="action view/user_actions">
+        <a href=""
+           tal:attributes="href action/url;
+                           id string:personaltools-${action/id};
+                           target action/link_target|nothing;"
+           tal:content="action/title"
+           i18n:translate="">
+            action title
+        </a>
+    </tal:actions>
+  </li>
 </ul>
+
+
 </div>

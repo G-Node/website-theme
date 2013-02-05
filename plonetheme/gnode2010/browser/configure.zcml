@@ -28,6 +28,8 @@
       permission="zope2.View"
       />
   -->
+
+
   <!-- The personal bar -->
   <browser:viewlet
       name="plone.personal_bar"
@@ -48,6 +50,8 @@
       class=".viewlets.LogoPartner"
       permission="zope2.View"
   />
+
+
   <!-- Customize the navigation portlet -->
   <plone:portletRenderer
       portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"

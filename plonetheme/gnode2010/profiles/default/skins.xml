@@ -38,7 +38,7 @@
        Note: insert-before (and -after) accepts the value "*" which means
        "all".
        -->
- <skin-path name="gnode2010" based-on="Plone Default">
+ <skin-path name="gnode2010" based-on="Plone Classic Theme">
   <layer name="plonetheme_gnode2010_custom_images"
      insert-after="custom"/>
   <layer name="plonetheme_gnode2010_custom_templates"

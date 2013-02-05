@@ -1,4 +1,4 @@
-Metadata-Version: 1.0
+Metadata-Version: 1.1
 Name: plonetheme.gnode2010
 Version: 1.0
 Summary: An installable theme for Plone 3
@@ -6,11 +6,7 @@ Home-page: http://svn.plone.org/svn/collective/
 Author: UNKNOWN
 Author-email: UNKNOWN
 License: GPL
-Description: Introduction
-        ============
-        
-        
-        
+Description: 
         Changelog
         =========
         

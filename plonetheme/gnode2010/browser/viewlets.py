@@ -21,6 +21,7 @@ from plone.app.layout.viewlets.common import ViewletBase
 #    def update(self):
 #        self.computed_value = 'any output'
 
+#class PersonalBarViewlet(ViewletBase):
 class PersonalBarViewlet(common.PersonalBarViewlet):
     """
     A custom version of the personal bar class.

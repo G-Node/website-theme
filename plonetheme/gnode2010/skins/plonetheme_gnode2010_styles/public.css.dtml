@@ -191,7 +191,7 @@ span.visualCaseSensitive
 {
 	background: #568ebe url(&dtml-portal_url;/navigation_bg.gif) repeat-x left top;
 	height: 35px;
-	margin: 0px 0px 3px 0px;
+	margin: -3px 0px 3px 0px;
 	padding: 0px; /*auto 0px auto;*/
 }
 #portal-globalnav li
@@ -315,7 +315,7 @@ dd{
 #portal-footer 
 {
 	background: #ffffff url(&dtml-portal_url;/footer_bg2.jpg) no-repeat left top;
-	height: 100px;
+	height: 20px;
     width: 930px;
 	margin: 20px auto 0px auto;
 }
